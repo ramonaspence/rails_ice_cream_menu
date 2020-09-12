@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  available: false
+  featured: false
+  date_churned: 2020-09-12 15:54:40
+
+two:
+  name: MyString
+  description: MyText
+  available: false
+  featured: false
+  date_churned: 2020-09-12 15:54:40
