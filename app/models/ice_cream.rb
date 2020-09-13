@@ -1,2 +1,2 @@
-class IceCream < ApplicationRecord
+class IceCream < ApplicationRecord 
 end
