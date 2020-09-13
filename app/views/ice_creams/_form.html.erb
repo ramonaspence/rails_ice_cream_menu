@@ -1,0 +1,27 @@
+<%= form_with model: @ice_cream, url: ice_creams_path, local: true do |form| %>
+    <p>
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+    </p>
+    <p>
+        <%= form.label :description %>
+        <%= form.text_area :description %>
+    </p>
+    <p>
+        <%= form.label :available %>
+        <%= form.radio_button :available, 'Currently Available' %>
+    </p>
+
+    <p>
+        <%= form.label :featured %>
+        <%= form.radio_button :featured, 'Currently Featured' %>
+    </p>
+    <p>
+        <%= form.label :date_churned %>
+        <%= form.datetime_field :date_churned %>
+    </p>
+    <p>
+        <%= form.submit %>
+    </p>
+
+<% end %>

@@ -1,0 +1,28 @@
+<p>
+  <strong>Title:</strong>
+  <%= @ice_cream.name %>
+</p>
+ 
+<p>
+  <strong>Text:</strong>
+  <%= @ice_cream.description %>
+</p>
+
+<p>
+  <strong>Available</strong>
+  <%= @ice_cream.available %>
+</p>
+
+<p>
+  <strong>Featured:</strong>
+  <%= @ice_cream.featured %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @ice_cream.date_churned %>
+</p>
+
+<%= link_to 'Delete', ice_creams_path,
+    method: :destroy,
+    data: { confirm: 'Are you sure?' } %>
