@@ -1,3 +1,15 @@
 ## Rails Ice Cream Shop ##
 
-This application is a mock Ice Cream menu.
+
+**Controllers**
+  *Common methods for CRUD
+  *Using `params.require().permit()`
+
+**Models**
+  *Validates
+    *presence
+    *length
+  *has_many
+
+**Templates**
+  * 
