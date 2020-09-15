@@ -1,8 +1,17 @@
 <h2>Ice Cream Menu</h2>
 
+<h4><%= link_to 'Add an Ice Cream flavor', new_ice_cream_url %></h4>
+
 <% @ice_cream.each do |i| %>
 
 <h4><%= i.name %></h4>
-<%= i.date_churned %>
+ <%# i.date_churned.strftime("churned on %m/%d") %>
+
+
+<%= link_to 'View', ice_cream_path(i)%>
+<%= link_to 'Update', edit_ice_cream_path(i) %>
+<%= link_to 'Destroy', ice_cream_path(i), 
+    method: :delete,
+    data: { confirm: 'Are you sure?' } %>
 
 <% end %>

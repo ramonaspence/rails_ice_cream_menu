@@ -20,9 +20,14 @@
 
 <p>
   <strong>Date:</strong>
-  <%= @ice_cream.date_churned %>
+  <%= @ice_cream.date_churned.strftime('%m/%d') %>
 </p>
 
-<%= link_to 'Delete', ice_creams_path,
-    method: :destroy,
+
+<%# Update link Here  %>
+<%= link_to 'Back', ice_creams_path %>
+
+<%= link_to 'Edit', edit_ice_cream_path(@ice_cream) %>
+<%= link_to 'Delete', ice_cream_path(@ice_cream),
+    method: :delete,
     data: { confirm: 'Are you sure?' } %>

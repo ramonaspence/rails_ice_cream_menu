@@ -5,6 +5,7 @@ class IceCreamsController < ApplicationController
     end
 
     def new
+        @ice_cream = IceCream.new
     end
 
     def show
@@ -13,9 +14,25 @@ class IceCreamsController < ApplicationController
 
     def create
         @ice_cream = IceCream.new(ice_cream_params)
+        if @ice_cream.save
+            redirect_to @ice_cream
+        else
+            render 'new'
+        end
+    end
 
-        @ice_cream.save
-        redirect_to @ice_cream
+    def edit
+        @ice_cream = IceCream.find(params[:id])
+    end
+
+    def update
+        @ice_cream = IceCream.find(params[:id])
+
+        if @ice_cream.update(ice_cream_params)
+            redirect_to @ice_cream
+        else
+            render 'edit'
+        end
     end
 
     def destroy
@@ -27,6 +44,6 @@ class IceCreamsController < ApplicationController
 
     private
         def ice_cream_params
-            params.permit(:name, :description, :available, :featured, :date_churned)
+            params.require(:ice_cream).permit(:name, :description, :available, :featured, :date_churned)
         end
 end

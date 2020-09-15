@@ -1,4 +1,21 @@
-<%= form_with model: @ice_cream, url: ice_creams_path, local: true do |form| %>
+<%= form_with model: @ice_cream, local: true do |form| %>
+    
+    <% if @ice_cream.errors.any? %>
+        <div id="error_explanation">
+            <h2>
+                <% pluralize(@ice_cream.errors.count, 'error') %> prohibited
+                    this article from being saved:
+            </h2>
+
+            <ul>            
+                <% @ice_cream.errors.full_messages.each do |msg| %>
+
+                <li><%= msg %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+
     <p>
         <%= form.label :name %>
         <%= form.text_field :name %>
@@ -9,12 +26,12 @@
     </p>
     <p>
         <%= form.label :available %>
-        <%= form.radio_button :available, 'Currently Available' %>
+        <%= form.check_box :available %>
     </p>
 
     <p>
         <%= form.label :featured %>
-        <%= form.radio_button :featured, 'Currently Featured' %>
+        <%= form.check_box :featured %>
     </p>
     <p>
         <%= form.label :date_churned %>
