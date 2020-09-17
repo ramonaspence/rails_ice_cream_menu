@@ -25,13 +25,11 @@ RSpec.describe IceCreamsController, :type => :controller do
 
 
         it 'redirects to show view for the ice_cream just created' do
-            params = { 
-                ice_cream: { 
+            params =
+                { 
                     name: "chocolate", description: "This is a chocolate ice cream", 
-                    date_churned: DateTime.now, 
-                } 
-            }
-            post :create, params
+                    date_churned: DateTime.now, }
+            post :create, **params
             expect(response).to redirect_to(@ice_cream)
         end
     end
