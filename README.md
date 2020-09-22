@@ -2,13 +2,13 @@
 
 Things that were learned/practiced. 
 
-**Controllers**  
-  *Common methods for CRUD  
-  *Using `params.require().permit()`  
+**Controllers**   
+  *Common methods for CRUD   
+  *Using `params.require().permit()`   
 
-**Models**  
+**Models**    
   *Validates   
-    *presence  
+    *presence   
     *length  
   *has_many  
 
