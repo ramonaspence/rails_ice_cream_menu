@@ -3,20 +3,20 @@
 Things that were learned/practiced. 
 
 **Controllers**   
-  *Common methods for CRUD   
-  *Using `params.require().permit()`   
+    *Common methods for CRUD   
+    *Using `params.require().permit()`   
 
 **Models**    
-  *Validates   
-    *presence   
-    *length  
-  *has_many  
+    *Validates   
+        *presence   
+        *length  
+    *has_many  
 
-**Templates** 
-  *forms 
-  *error_checkss 
+**Templates**  
+    *forms  
+    *error_checkss  
 
-**Routing** 
-  *resource
-  *rails routes
-  *path naming conventions
+**Routing**  
+    *resource  
+    *rails routes  
+    *path naming conventions  
