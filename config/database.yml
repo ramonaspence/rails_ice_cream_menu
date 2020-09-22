@@ -80,7 +80,9 @@ test:
 #
 production:
   <<: *default
-  database: menu_production
+  # adapter: postgresql
   url: <%= ENV['DATABASE_URL'] %>
-  username: ramonaspence
-  password: <%= ENV['MENU_DATABASE_PASSWORD'] %>
+  # database: menu_production
+ 
+  # username: ramonaspence
+  # password: <%= ENV['MENU_DATABASE_PASSWORD'] %>
